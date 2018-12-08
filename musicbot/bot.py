@@ -1116,7 +1116,7 @@ class MusicBot(discord.Client):
         desc = '```\n' + ', '.join(self.commands) + '\n```\n' + self.str.get(
             'cmd-help-response', 'Necesitas ayuda sobre un comando en especifico?, escribe `{}help [comando]`').format(prefix)
         if not self.is_all:
-            desc += self.str.get('cmd-help-all', '\nOnly showing commands you can use, for a list of all commands, run `{}help all`').format(prefix)
+            desc += self.str.get('cmd-help-all', '\nSolo te estamos mostrando la lista de comandos que tu puedes ejecutar, si quieres una lista de todos los comandos usa `{}help all`').format(prefix)
 
         return Response(desc, reply=True, delete_after=60)
 
