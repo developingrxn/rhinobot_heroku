@@ -1063,7 +1063,7 @@ class MusicBot(discord.Client):
         """Provides a basic template for embeds"""
         e = discord.Embed()
         e.colour = 7506394
-        e.set_footer(text='LøL for fun Private BOT ({})'.format(BOTVERSION), icon_url='http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Music-icon.png')
+        e.set_footer(text='LoL for fun Private BOT ({})'.format(BOTVERSION), icon_url='http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Music-icon.png')
         e.set_author(name=self.user.name, url='http://discord.qox.party', icon_url=self.user.avatar_url)
         return e
 
