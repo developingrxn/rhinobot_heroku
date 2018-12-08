@@ -1086,7 +1086,7 @@ class MusicBot(discord.Client):
         If a command is specified, it prints a help message for that command.
         Otherwise, it lists the available commands.
         """
-        self.commands = [helpme1]
+        self.commands = []
         self.is_all = False
         prefix = self.config.command_prefix
 
