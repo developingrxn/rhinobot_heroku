@@ -2705,7 +2705,7 @@ class MusicBot(discord.Client):
             if response and isinstance(response, Response):
                 if not isinstance(response.content, discord.Embed) and self.config.embeds:
                     content = self._gen_embed()
-                    content.title = lolforfun
+                    content.title = LoLForFun
                     content.description = response.content
                 else:
                     content = response.content
