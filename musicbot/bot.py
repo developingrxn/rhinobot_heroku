@@ -1063,8 +1063,8 @@ class MusicBot(discord.Client):
         """Provides a basic template for embeds"""
         e = discord.Embed()
         e.colour = 7506394
-        e.set_footer(text='FeatherMusic Private BOT ({})'.format(BOTVERSION), icon_url='http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Music-icon.png')
-        e.set_author(name=self.user.name, url='http://music.feather.host', icon_url=self.user.avatar_url)
+        e.set_footer(text='LøL for fun Private BOT ({})'.format(BOTVERSION), icon_url='http://icons.iconarchive.com/icons/dtafalonso/yosemite-flat/512/Music-icon.png')
+        e.set_author(name=self.user.name, url='http://discord.qox.party', icon_url=self.user.avatar_url)
         return e
 
     async def cmd_resetplaylist(self, player, channel):
@@ -2705,7 +2705,7 @@ class MusicBot(discord.Client):
             if response and isinstance(response, Response):
                 if not isinstance(response.content, discord.Embed) and self.config.embeds:
                     content = self._gen_embed()
-                    content.title = command
+                    content.title = LøL for fun
                     content.description = response.content
                 else:
                     content = response.content
@@ -2733,7 +2733,7 @@ class MusicBot(discord.Client):
                 content.add_field(name='Error', value=e.message, inline=False)
                 content.colour = 13369344
             else:
-                content = '```\n{}\n```'.format(e.message)
+                content = '\n{}\n'.format(e.message)
 
             await self.safe_send_message(
                 message.channel,
@@ -2748,7 +2748,7 @@ class MusicBot(discord.Client):
         except Exception:
             log.error("Exception in on_message", exc_info=True)
             if self.config.debug_mode:
-                await self.safe_send_message(message.channel, '```\n{}\n```'.format(traceback.format_exc()))
+                await self.safe_send_message(message.channel, '\n{}\n'.format(traceback.format_exc()))
 
         finally:
             if not sentmsg and not response and self.config.delete_invoking:
